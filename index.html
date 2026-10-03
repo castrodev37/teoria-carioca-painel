@@ -155,6 +155,40 @@ tbody tr:hover { background: var(--accent-soft); }
 .limits li { max-width: 80ch; }
 .limits ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
 
+
+/* Seções por rede e destaque */
+h2.part { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); font-weight: 800; padding-top: 10px; border-top: 1px solid var(--line); }
+.spotlight { background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--brand); border-radius: 14px; padding: 18px 20px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 18px; align-items: center; }
+.spot-text { display: grid; gap: 6px; min-width: 0; }
+.spotlight h2 { font-size: 1.25rem; text-transform: uppercase; }
+.spot-nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.spot-nums div { display: grid; gap: 2px; }
+.spot-nums b { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; }
+.spot-nums span { font-size: 0.8rem; color: var(--muted); }
+.stack-wrap { display: grid; gap: 16px; }
+.stack-row { display: grid; gap: 6px; }
+.stack-row .t { font-size: 0.8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.stack { display: flex; height: 26px; border-radius: 6px; overflow: hidden; gap: 2px; background: var(--surface); }
+.stack span { display: flex; align-items: center; padding-inline: 8px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; overflow: hidden; }
+.stack .keep { background: var(--accent); color: #fff; }
+.stack .drop { background: var(--grid); color: var(--muted); }
+table.cross { min-width: 720px; }
+table.cross td:last-child, table.cross th:last-child { text-align: left; white-space: normal; min-width: 240px; color: var(--muted); }
+.pautas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.pauta { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.pauta header { display: flex; gap: 10px; align-items: baseline; }
+.pauta .rank { font-family: var(--font-data); font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+.pauta h3 { font-size: 1rem; font-weight: 800; }
+.pauta p { font-size: 0.86rem; color: var(--muted); }
+.pauta ul { margin: 0; padding-left: 18px; font-size: 0.86rem; display: grid; gap: 2px; }
+.pauta .hook { font-size: 0.84rem; background: var(--bg); border-radius: 8px; padding: 8px 10px; }
+.pauta .hook b { color: var(--ink); }
+.avoid { margin-top: 14px; font-size: 0.86rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 12px; }
+.avoid b { color: var(--bad); }
+@media (max-width: 960px) {
+  .spotlight, .pautas { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Tooltip */
 .tip {
   position: fixed; pointer-events: none; z-index: 10; background: var(--ink); color: var(--bg);
@@ -182,85 +216,155 @@ tbody tr:hover { background: var(--accent-soft); }
 <div class="wrap">
   <header class="head">
     <span class="pill">TEORIA CARIOCA</span>
-    <h1>Instagram: <span>@teoriacarioca2026</span></h1>
+    <h1>YouTube e Instagram: <span>raio-x dos canais</span></h1>
     <div class="meta">
-      <span>Período <b>20/09 a 01/10/2026</b> (12 dias de conta)</span>
-      <span>Fonte <b>Meta Business Suite</b>, lido em 02/10/2026</span>
-      <span><b>20 reels</b> e <b>1 story</b></span>
+      <span>Instagram <b>@teoriacarioca2026</b>: 20/09 a 02/10/2026</span>
+      <span>YouTube <b>Teoria Carioca</b>: 05/09 a 02/10/2026 (28 dias)</span>
+      <span>Fontes <b>Meta Business Suite</b> e <b>YouTube Studio</b>, lidos em 03/10/2026</span>
     </div>
   </header>
 
   <section class="verdict" aria-label="Resumo">
-    <h2>O que o painel mostra</h2>
-    <p>Os reels chegam a quem não segue a conta (<strong>82% do alcance</strong>), mas quase ninguém vira seguidor: <strong>~0,6%</strong> de quem viu. O tema que funciona está claro: <strong>memória de São Gonçalo</strong> rende 2,6 vezes mais visualizações que temas gerais do Rio, e o compartilhamento é o que traz seguidor.</p>
+    <h2>O que os painéis mostram</h2>
+    <p>O formato novo funcionou: o reel de <strong>Maria Paula</strong> (37 s, título com a punchline) teve <strong>1.657 visualizações</strong> no Instagram, o maior tempo assistido desde a boate (17 s) e trouxe 4 seguidores num dia. A conta foi de 88 para <strong>94 seguidores</strong>. No YouTube, os <strong>Shorts trazem gente nova, mas são os vídeos longos que trazem inscritos</strong> (22 contra 4). O problema comum às duas redes são os primeiros segundos: 54% pulam o Short e só 1 em cada 5 continua no vídeo longo depois de 30 s.</p>
   </section>
 
   <section class="kpis" aria-label="Números do período">
     <div class="kpi">
-      <span class="label">Visualizações</span>
-      <span class="value">9,0 mil</span>
-      <span class="note">81,7% de não seguidores</span>
+      <span class="label">Instagram · seguidores</span>
+      <span class="value">94</span>
+      <span class="note">eram 88 em 01/10</span>
+      <span class="chip good">✓ +6 em um dia</span>
     </div>
     <div class="kpi">
-      <span class="label">Alcance</span>
-      <span class="value">5,2 mil</span>
-      <span class="note">5.171 não seguidores · 84 seguidores</span>
-      <span class="chip good">✓ boa distribuição</span>
+      <span class="label">Instagram · visualizações</span>
+      <span class="value">10,7 mil</span>
+      <span class="note">84% de não seguidores · alcance 6 mil</span>
     </div>
     <div class="kpi">
-      <span class="label">Interações</span>
-      <span class="value">572</span>
-      <span class="note">71% vêm de quem já segue</span>
-      <span class="chip warn">! quem chega de fora não interage</span>
+      <span class="label">YouTube · inscritos</span>
+      <span class="value">37</span>
+      <span class="note">22 vieram de vídeos longos, 4 de Shorts</span>
     </div>
     <div class="kpi">
-      <span class="label">Seguidores</span>
-      <span class="value">88</span>
-      <span class="note">~32 ganhos pelos reels</span>
-      <span class="chip bad">✕ 0,6% de conversão</span>
+      <span class="label">YouTube · visualizações</span>
+      <span class="value">4,7 mil</span>
+      <span class="note">71% em Shorts · 54,7 h assistidas</span>
     </div>
     <div class="kpi">
-      <span class="label">Tempo médio assistido</span>
-      <span class="value">13 s</span>
-      <span class="note">mediana dos reels; vídeos de 40 a 65 s</span>
-      <span class="chip warn">! saem antes da metade</span>
+      <span class="label">Primeiros segundos</span>
+      <span class="value">54%</span>
+      <span class="note">pulam o Short no YouTube; no vídeo longo, 20 a 23% ficam até 0:30</span>
+      <span class="chip bad">✕ principal gargalo</span>
     </div>
   </section>
+
+  <section class="spotlight" aria-label="Destaque">
+    <div class="spot-text">
+      <span class="when now">Destaque da semana</span>
+      <h2>"Por que quem é de Maria Paula dizia que era de Niterói?"</h2>
+      <p class="sub">Primeiro reel no formato novo: corte de 37 s, título que puxa a curiosidade e CTA com pergunta. Publicado em 02/10 às 14h34.</p>
+    </div>
+    <div class="spot-nums">
+      <div><b class="num">1.657</b><span>visualizações no Instagram</span></div>
+      <div><b class="num">17 s</b><span>tempo médio (46% do vídeo)</span></div>
+      <div><b class="num">4</b><span>seguidores ganhos</span></div>
+      <div><b class="num">241</b><span>visualizações no YouTube em 18 h, 34,9% assistido</span></div>
+    </div>
+  </section>
+
+  <h2 class="part">Instagram</h2>
 
   <section class="grid2">
     <div class="panel">
       <h2>Visualizações por dia</h2>
-      <p class="sub">O pico foi em 27/09. Depois a curva cai nos dias seguintes aos de 2 a 4 reels publicados.</p>
+      <p class="sub">Depois do pico de 27/09, a curva caiu até 408 em 01/10. Voltou a 1.747 em 02/10, com um reel só no dia: o de Maria Paula.</p>
       <div id="daily"></div>
       <p class="foot">Visualizações da conta no dia (todos os reels). Linha de baixo: reels publicados no dia.</p>
     </div>
     <div class="panel">
       <h2>Memória de SG × Rio em geral</h2>
       <p class="sub">Média por reel em cada tipo de tema.</p>
-      <div class="legend"><span><i style="background:var(--accent)"></i>Memória de SG (12 reels)</span><span><i style="background:var(--neutral-mark)"></i>Rio em geral (8 reels)</span></div>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Memória de SG (13 reels)</span><span><i style="background:var(--neutral-mark)"></i>Rio em geral (8 reels)</span></div>
       <div class="compare" id="compare"></div>
-      <p class="foot">Memória de SG: boates, carro da linguiça, colégio, ônibus, Alcântara, Orkut. Rio em geral: geração, caos, habilidades, iguarias, apresentação.</p>
+      <p class="foot">Memória de SG: boates, carro da linguiça, colégio, ônibus, Alcântara, Orkut, Maria Paula. Rio em geral: geração, caos, habilidades, iguarias, apresentação.</p>
     </div>
   </section>
 
   <section class="grid2">
     <div class="panel">
       <h2>Seguidores ganhos por reel</h2>
-      <p class="sub">Um reel trouxe metade dos seguidores: o carro da linguiça de 22/09, com 45 compartilhamentos.</p>
+      <p class="sub">O carro da linguiça de 22/09 continua na frente, com 17 seguidores e 45 compartilhamentos. Maria Paula já é o segundo.</p>
       <div id="follows"></div>
       <p class="foot">Só reels com pelo menos 1 seguidor ganho. Entre parênteses, os compartilhamentos.</p>
     </div>
     <div class="panel">
       <h2>Retenção</h2>
-      <p class="sub">Tempo médio assistido de cada reel, em segundos. Os dois que seguraram mais tempo também estão entre os que mais cresceram.</p>
+      <p class="sub">Tempo médio assistido de cada reel, em segundos. Maria Paula (17 s) entrou no grupo dos que mais seguram.</p>
       <div id="watch"></div>
-      <p class="foot">Alvo para os próximos: vídeos de 20 a 35 s com o gancho nos 2 primeiros segundos.</p>
+      <p class="foot">Alvo: vídeos de 20 a 35 s com o gancho nos 2 primeiros segundos.</p>
     </div>
   </section>
 
+  <h2 class="part">YouTube</h2>
+
+  <section class="grid2">
+    <div class="panel">
+      <h2>Shorts trazem gente, vídeos longos trazem inscritos</h2>
+      <p class="sub">Últimos 28 dias, por formato.</p>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Shorts</span><span><i style="background:var(--neutral-mark)"></i>Vídeos longos</span></div>
+      <div class="compare" id="ytformat"></div>
+      <p class="foot">Novos espectadores: 1,2 mil nos Shorts e 190 nos vídeos. Os demais inscritos do período não aparecem nessa divisão por formato.</p>
+    </div>
+    <div class="panel">
+      <h2>Onde o público desiste</h2>
+      <p class="sub">Shorts: quantos continuaram assistindo depois dos primeiros segundos. Vídeos longos: quantos ainda assistiam aos 30 segundos.</p>
+      <div class="stack-wrap" id="ytretention"></div>
+      <p class="foot">Duração média dos vídeos longos: 4:58. Taxa de cliques na miniatura: 3,0% (12,5 mil impressões).</p>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="panel">
+      <h2>De onde vem o público</h2>
+      <p class="sub">Nos Shorts, quase tudo vem do feed. Nos vídeos longos, <strong>30,5% vêm da busca</strong>: título e descrição com nomes de SG fazem diferença.</p>
+      <div id="ytsources"></div>
+    </div>
+    <div class="panel">
+      <h2>Quem assiste</h2>
+      <p class="sub">91,8% homens. 75% no celular, 12% na TV. A maioria tem de 25 a 44 anos, a geração das boates e do Orkut.</p>
+      <div id="ytage"></div>
+      <p class="foot">Visualizações por faixa de idade declarada, últimos 28 dias.</p>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="Mesmo tema nas duas redes">
+    <h2>Mesmo tema, duas redes</h2>
+    <p class="sub">Visualizações somadas de cada tema. O carro da linguiça é o mais forte nas duas. O vídeo longo do mesmo tema rende pouco.</p>
+    <div class="table-wrap">
+      <table id="cross" class="cross">
+        <thead><tr><th scope="col">Tema</th><th scope="col">Instagram</th><th scope="col">YouTube Shorts</th><th scope="col">YouTube vídeo longo</th><th scope="col">Leitura</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <h2 class="part">Pautas para o podcast de hoje</h2>
+  <section class="panel" aria-label="Pautas">
+    <p class="sub" id="pautas-sub"></p>
+    <div class="pautas" id="pautas"></div>
+    <div class="avoid" id="avoid"></div>
+  </section>
+
+  <h2 class="part">Plano de ação</h2>
+  <section class="panel" aria-label="Plano de ação">
+    <p class="sub">Marque o que já foi feito. A marcação fica salva só neste navegador.</p>
+    <div class="plan" id="plan"></div>
+  </section>
+
   <section class="panel" aria-label="Todos os reels">
-    <h2>Todos os reels</h2>
-    <p class="sub">Clique no nome de uma coluna para ordenar.</p>
+    <h2>Todos os reels do Instagram</h2>
+    <p class="sub">Clique no nome de uma coluna para ordenar. Números dos 7 reels mais recentes lidos em 03/10; os demais, em 02/10.</p>
     <div class="table-wrap">
       <table id="reels">
         <thead><tr></tr></thead>
@@ -269,37 +373,52 @@ tbody tr:hover { background: var(--accent-soft); }
     </div>
   </section>
 
-  <section class="panel" aria-label="Plano de ação">
-    <h2>Plano de ação</h2>
-    <p class="sub">Marque o que já foi feito. A marcação fica salva só neste navegador.</p>
-    <div class="plan" id="plan"></div>
-  </section>
-
   <section class="panel limits" aria-label="Limites da análise">
     <h2>Limites desta análise</h2>
     <ul>
-      <li>Idade, cidade e horários do público só aparecem a partir de 100 seguidores. A conta tem 88.</li>
-      <li>A retenção segundo a segundo de cada reel fica no app do Instagram, em "Ver insights" do reel.</li>
-      <li>São 12 dias de conta. Refaça a leitura por volta de 20/10, com 4 semanas de dados.</li>
+      <li>TikTok ficou de fora: sem acesso à conta.</li>
+      <li>Instagram: idade, cidade e horários do público só aparecem a partir de 100 seguidores. Faltam 6.</li>
+      <li>YouTube: ainda não há espectadores suficientes para o relatório de horários. Quase todo o público é novo (99,5%).</li>
+      <li>São menos de 2 semanas de dados nas duas redes. Refaça a leitura por volta de 20/10.</li>
     </ul>
   </section>
 </div>
+
 <div class="tip" id="tip" hidden></div>
 
 <script>
+// Pautas de 03/10/2026 (pesquisas/pautas-gravacao-2026-10-03.md)
+const PAUTAS_SUB = "Cruzamento do que mais funcionou nos canais com o que o público procura no Google e no YouTube (03/10). Ordenadas por potencial. Amanhã (04/10) é o 1º turno da eleição: nada de candidato, partido ou governo nos cortes.";
+const PAUTAS = [
+  { tema: "O Piscinão de São Gonçalo", porque: "O Google completa \"piscinão de são gonçalo antigamente\", \"como era\", \"ainda existe\" e \"prova do detran no piscinão\". No YouTube só há reportagens antigas, com até 4 mil views.", perguntas: ["Quem foi na inauguração (2004) e qual era o \"kit praia\" de SG?", "Quem fez prova do Detran lá e passou na baliza?", "O Parque RJ ficou parecido com alguma coisa?"], gancho: "\"São Gonçalo já teve praia artificial e eu fiz prova de direção dentro dela.\"" },
+  { tema: "O trem que cortava São Gonçalo", porque: "O vídeo do trem Niterói–Visconde de Itaboraí em 2004 tem 187 mil views. O Google pergunta \"são gonçalo tem trem?\". O MUVI, que corre no antigo leito, está em alta (+110%).", perguntas: ["Alguém andou no trem (até 2006)? Ia pra onde?", "Que bairro ainda tem trilho ou casinha da estação?", "Daqui a 20 anos vamos ter saudade do MUVI?"], gancho: "\"Se você tem menos de 25 anos, não acredita que São Gonçalo teve trem.\"" },
+  { tema: "Boates de Niterói × boates de SG nos anos 90", porque: "Leva a pauta que mais funcionou (boates) para o público de Niterói. O Google completa Kool Ibiza, Babylon, Acrópole; em SG, 488, Hollywood, Paris. \"Matinê nos anos 90\" tem 1,3 milhão de views.", perguntas: ["Gonçalense ia pra boate em Niterói ou o contrário?", "Qual era a roupa obrigatória?", "Matinê: que horas tinha que estar em casa?"], gancho: "\"Ranking das boates do leste fluminense em 30 segundos\": um de SG contra um de Niterói." },
+  { tema: "Cosme e Damião: a maratona do saquinho", porque: "É o pico da semana, o maior em 12 meses. O Google pergunta \"adulto pode pegar doce de cosme e damião?\".", perguntas: ["Qual era a estratégia para pegar mais saquinhos?", "Qual doce era o mais disputado?", "Ainda tem fila na rua do seu bairro?"], gancho: "\"Adulto pode pegar doce de Cosme e Damião? O Google quer saber e a gente responde.\" Rir da correria das crianças, nunca da religião." },
+  { tema: "Ônibus de SG que não existem mais", porque: "O ônibus da Santa Isabel já funcionou no Instagram. \"Ônibus antigos de São Gonçalo e Niterói\" tem 26 mil views; o YouTube completa \"ônibus de uma porta\".", perguntas: ["Qual empresa vocês pegavam?", "Quem lembra do ônibus de uma porta com a roleta no fundo?", "Qual linha era a mais \"aventura\" para ir ao Rio?"], gancho: "\"Diz a linha que você pegava e eu digo de que bairro você é.\"" },
+  { tema: "Baile do Mauá e baile das antigas", porque: "\"Baile do Mauá de São Gonçalo anos 90\" tem 634 mil views. Hoje o \"baile das antigas\" acontece no shopping.", perguntas: ["Mauá, Tamoio ou clube de bairro: qual era o seu?", "Qual era a dança da época?", "O que mudou com o baile no shopping?"], gancho: "\"Hoje o baile das antigas é no shopping. Na minha época era…\" Sem exaltar briga de galera nem baile de corredor." },
+  { tema: "Carro da linguiça, parte 2: o que significa", porque: "É o tema que mais trouxe seguidores nas duas redes, e o Google pergunta \"carro da linguiça significado\". Há poucos vídeos curtos de humor sobre o tema.", perguntas: ["Cada um explica o que era o carro da linguiça na sua rua.", "Quem mais já \"foi vítima\"?", "Qual era o código para avisar que ele vinha?"], gancho: "\"Se você não é de SG, você não sabe o que é o carro da linguiça.\" Só a versão de humor de quem viveu, com título neutro." },
+  { tema: "Rua da Feira de Alcântara", porque: "Alcântara está entre as buscas da semana sobre SG, e um vídeo recente do festival em Alcântara fez 40 mil views em 8 dias.", perguntas: ["Qual a compra mais absurda que você fez lá?", "O que sua mãe comprava que hoje não existe?", "Alcântara é o verdadeiro centro de SG?"], gancho: "\"Tudo que você já comprou na Rua da Feira e não sabe explicar por quê.\"" },
+  { tema: "Colégios lendários de SG, parte 2", porque: "O Google pergunta \"por que o colégio são gonçalo fechou\". Outros colégios tradicionais também fecharam (CEJOP, em 2023).", perguntas: ["Qual era o uniforme mais zoado?", "E a rivalidade entre colégios?", "Quem colava, e como?"], gancho: "\"Diz o seu colégio em SG que eu digo como você era na escola.\"" },
+  { tema: "Orkut e lan house, parte 2", porque: "Os encontros do Orkut já funcionaram. \"Jogos perdidos do Orkut\" fez 224 mil views em 1 mês, e \"anos 2000\" está no pico de 5 anos.", perguntas: ["Qual era a lan house do bairro e quanto custava a hora?", "Qual comunidade de SG vocês participavam?", "Qual depoimento vocês apagariam hoje?"], gancho: "\"O depoimento mais vergonhoso que eu recebi no Orkut.\"" },
+  { tema: "Rodada \"o Google pergunta, a mesa responde\"", porque: "Perguntas reais do autocompletar rendem cortes curtos em série: \"Niterói é uma ilha?\", \"gonçalense x niteroiense\", \"SG tem metrô?\".", perguntas: ["Ler de 6 a 8 perguntas em sequência.", "Cada um responde em uma frase.", "A resposta mais engraçada vira short."], gancho: "\"Niterói é uma ilha?\", respondida por um gonçalense." },
+  { tema: "A lenda do metrô de São Gonçalo", porque: "São 58 anos de promessa, e vídeos antigos da Linha 3 passam de 200 mil views. É promessa de campanha: só publicar depois da eleição.", perguntas: ["Em que ano vocês ouviram que o metrô vinha?", "O que chega primeiro, o metrô ou…?", "Qual seria o nome da estação do seu bairro?"], gancho: "\"Meu avô ouviu falar do metrô de São Gonçalo, meu pai também, e eu também.\" Gravar sem citar político e publicar depois de 25/10." },
+];
+const EVITAR = "política (eleição amanhã, deputados, Linha 3 como promessa), crime e violência em alta nas buscas (\"policial morto\", \"ônibus sequestrado\"), funk de galera e baile de corredor, o sentido de chacina do \"carro da linguiça\", suicídio na ponte, piada com religião em Cosme e Damião e música comercial tocando por mais de alguns segundos.";
+
 const DAYS = [
   ["20/09", 41, 2], ["21/09", 651, 4], ["22/09", 941, 1], ["23/09", 526, 2], ["24/09", 495, 1],
   ["25/09", 664, 1], ["26/09", 1084, 2], ["27/09", 1899, 2], ["28/09", 1172, 2], ["29/09", 600, 1],
-  ["30/09", 518, 1], ["01/10", 408, 1],
+  ["30/09", 518, 1], ["01/10", 408, 1], ["02/10", 1747, 1],
 ];
 // título, data, tema, views, alcance, interações, comentários, compart., seguidores, média (s)
 const REELS = [
-  ["Encontros do Orkut no shopping de SG", "01/10 20:17", "sg", 190, 148, 13, 3, 0, 0, 14],
-  ["Ônibus da Santa Isabel: o óculos novo", "30/09 08:00", "sg", 216, 154, 11, 2, 0, 1, 13],
-  ["Colégio São Gonçalo", "29/09 11:36", "sg", 759, 647, 29, 4, 3, 2, 14],
-  ["Ch*mb!nh* e o golpe do perfume", "28/09 13:05", "sg", 327, 262, 15, 2, 0, 0, 12],
-  ["Ônibus da Santa Isabel: qual era o apelido?", "28/09 07:33", "sg", 245, 168, 27, 7, 3, 0, 13],
-  ["Alcântara tem de tudo", "27/09 19:40", "sg", 434, 323, 29, 3, 12, 1, 13],
+  ["Por que quem é de Maria Paula dizia que era de Niterói?", "02/10 14:34", "sg", 1657, 1194, 27, 6, 2, 4, 17],
+  ["Encontros do Orkut no shopping de SG", "01/10 20:17", "sg", 221, 168, 16, 4, 0, 0, 14],
+  ["Ônibus da Santa Isabel: o óculos novo", "30/09 08:00", "sg", 225, 161, 11, 2, 0, 1, 14],
+  ["Colégio São Gonçalo", "29/09 11:36", "sg", 776, 654, 31, 6, 3, 2, 14],
+  ["Ch*mb!nh* e o golpe do perfume", "28/09 13:05", "sg", 334, 265, 15, 2, 0, 0, 12],
+  ["Ônibus da Santa Isabel: qual era o apelido?", "28/09 07:33", "sg", 256, 173, 30, 8, 3, 0, 13],
+  ["Alcântara tem de tudo", "27/09 19:40", "sg", 451, 336, 29, 3, 12, 1, 13],
   ["Quem é de São Gonçalo sabe", "27/09 12:25", "sg", 755, 609, 30, 8, 2, 0, 11],
   ["Dito e Feito: a boate que marcou uma geração", "26/09 21:57", "sg", 1546, 1187, 26, 6, 0, 1, 22],
   ["Caneco 90", "26/09 20:55", "sg", 482, 411, 10, 2, 0, 0, 10],
@@ -485,21 +604,136 @@ const hbars = (target, rows, { max, label, value, aria, highlight }) => {
   render();
 })();
 
+// 7. YouTube: formato (Shorts × vídeos longos)
+(() => {
+  const metrics = [
+    ["Visualizações", 3300, 1300, (v) => fmt(v)],
+    ["Novos espectadores", 1200, 190, (v) => fmt(v)],
+    ["Inscritos ganhos", 4, 22, (v) => "+" + v],
+  ];
+  const box = document.getElementById("ytformat");
+  metrics.forEach(([title, a, b, f]) => {
+    const m = Math.max(a, b);
+    const row = document.createElement("div");
+    row.className = "cmp-row";
+    row.innerHTML = `<span class="t">${title}</span>
+      <div class="cmp-line"><span class="name">Shorts</span><div class="track"><div class="fill" style="width:${(a / m) * 100}%"></div></div><span class="v">${f(a)}</span></div>
+      <div class="cmp-line"><span class="name">Vídeos longos</span><div class="track"><div class="fill dim" style="width:${(b / m) * 100}%"></div></div><span class="v">${f(b)}</span></div>`;
+    box.append(row);
+  });
+})();
+
+// 8. YouTube: onde o público desiste
+(() => {
+  const rows = [
+    ["Shorts · depois dos primeiros segundos", 46.1, "continuaram", "pularam"],
+    ["Vídeo longo: Onde estão as boates do Rio? · aos 30 s", 23, "ainda assistindo", "saíram"],
+    ["Vídeo longo: O carioca e a cultura do caos · aos 30 s", 20, "ainda assistindo", "saíram"],
+  ];
+  const box = document.getElementById("ytretention");
+  rows.forEach(([t, keep, k, d]) => {
+    const pct = (v) => v.toFixed(v % 1 ? 1 : 0).replace(".", ",") + "%";
+    const row = document.createElement("div");
+    row.className = "stack-row";
+    row.innerHTML = `<span class="t">${t}</span>
+      <div class="stack" role="img" aria-label="${pct(keep)} ${k}, ${pct(100 - keep)} ${d}">
+        <span class="keep" style="width:${keep}%">${pct(keep)} ${k}</span>
+        <span class="drop" style="width:${100 - keep}%">${pct(100 - keep)} ${d}</span>
+      </div>`;
+    box.append(row);
+  });
+})();
+
+// 9. YouTube: origens de tráfego dos vídeos longos
+(() => {
+  const rows = [
+    { name: "Navegação (página inicial)", v: 42.5 },
+    { name: "Pesquisa do YouTube", v: 30.5 },
+    { name: "Vídeos sugeridos", v: 9.8 },
+    { name: "Página do canal", v: 6.5 },
+    { name: "Externa", v: 4.8 },
+    { name: "Outros", v: 5.8 },
+  ];
+  const pct = (v) => v.toString().replace(".", ",") + "%";
+  hbars("ytsources", rows, {
+    max: 45,
+    label: (r) => pct(r.v),
+    value: (r) => `Vídeos longos<br>${r.name}: <b>${pct(r.v)}</b> das visualizações`,
+    aria: "Origem das visualizações dos vídeos longos: navegação 42,5%, pesquisa 30,5%.",
+    highlight: (r) => r.name.startsWith("Pesquisa"),
+  });
+  const p = document.createElement("p");
+  p.className = "foot";
+  p.textContent = "Shorts: 91,5% vêm do feed dos Shorts, 3,3% da pesquisa e 2,2% da página do canal.";
+  document.getElementById("ytsources").append(p);
+})();
+
+// 10. YouTube: idade
+(() => {
+  const rows = [
+    { name: "13 a 17 anos", v: 5.4 }, { name: "18 a 24 anos", v: 9.2 }, { name: "25 a 34 anos", v: 28.5 },
+    { name: "35 a 44 anos", v: 24.1 }, { name: "45 a 54 anos", v: 16.8 }, { name: "55 a 64 anos", v: 8.4 },
+    { name: "65 anos ou mais", v: 7.6 },
+  ];
+  const pct = (v) => v.toString().replace(".", ",") + "%";
+  hbars("ytage", rows, {
+    max: 30,
+    label: (r) => pct(r.v),
+    value: (r) => `${r.name}: <b>${pct(r.v)}</b> das visualizações`,
+    aria: "Idade do público: 25 a 34 anos 28,5%, 35 a 44 anos 24,1%.",
+    highlight: (r) => r.v > 20,
+  });
+})();
+
+// 11. Mesmo tema nas duas redes
+(() => {
+  const ROWS = [
+    ["Carro da linguiça", 1272, 1979, 73, "O tema mais forte nas duas redes. O vídeo longo (3:26) quase não foi visto: título genérico."],
+    ["Boates de SG e do Rio", 2028, null, 376, "Melhor reel em retenção (Dito e Feito). No YouTube, é o vídeo longo mais visto."],
+    ["Maria Paula × Niterói", 1657, 241, null, "Formato novo de 37 s. No YouTube, com 18 h, ainda está crescendo."],
+    ["Lambaeróbica (demitido)", 984, 505, null, "Bom nas duas redes: humor e título com conflito."],
+    ["Colégio São Gonçalo", 776, null, 78, "Rende mais em corte curto do que no vídeo longo de 9 min."],
+    ["Ch*mb!nh* / golpe do perfume", 334, 426, null, "Único tema melhor no YouTube do que no Instagram."],
+    ["Alcântara", 451, 155, null, "Cortes diferentes em cada rede. O do Instagram teve 12 compartilhamentos."],
+    ["Carioca / cultura do caos", 160, null, 469, "Temas gerais do Rio rendem pouco nas duas redes."],
+  ];
+  const n = (v) => (v == null ? "—" : fmt(v));
+  document.querySelector("#cross tbody").innerHTML = ROWS.map(
+    ([t, ig, ys, yl, note]) => `<tr><td>${t}</td><td>${n(ig)}</td><td>${n(ys)}</td><td>${n(yl)}</td><td>${note}</td></tr>`,
+  ).join("");
+})();
+
+// 12. Pautas de hoje
+(() => {
+  document.getElementById("pautas-sub").textContent = PAUTAS_SUB;
+  document.getElementById("pautas").innerHTML = PAUTAS.map(
+    (p, i) => `<article class="pauta">
+      <header><span class="rank">${String(i + 1).padStart(2, "0")}</span><h3>${p.tema}</h3></header>
+      <p>${p.porque}</p>
+      <ul>${p.perguntas.map((q) => `<li>${q}</li>`).join("")}</ul>
+      <p class="hook"><b>Gancho para short:</b> ${p.gancho}</p>
+    </article>`,
+  ).join("");
+  document.getElementById("avoid").innerHTML = `<b>Evitar hoje:</b> ${EVITAR}`;
+})();
+
 // 6. Plano de ação
 (() => {
   const STEPS = [
-    ["now", "Agora", "Responder os 10 comentários parados", "Responda na primeira hora depois de cada post, sempre com uma pergunta de volta.", "comentários puxam distribuição"],
-    ["now", "Agora", "Fixar os 3 melhores reels no perfil", "Carro da linguiça (22/09), boate Dito e Feito e Colégio São Gonçalo.", "vitrine para quem chega pelo Explorar"],
-    ["now", "Agora", "Reescrever a bio", "\"Histórias de São Gonçalo que só quem é daqui entende 🎙️ Toda semana um episódio novo.\"", "dá o motivo para seguir"],
-    ["now", "Esta semana", "1 reel por dia, no mesmo horário", "Teste 12h ou 19h–20h por duas semanas e compare. Agende pelo Metricool.", "a curva caiu nos dias com 2 a 4 reels"],
-    ["now", "Esta semana", "Publicar em Collab com os participantes", "Convide @castrocayyo, @rafael.soares21, @figueiredowillians e @getulio_vargas como colaboradores, em vez de só marcar.", "o reel aparece para os seguidores deles"],
-    ["next", "Próximos cortes", "Vídeos de 20 a 35 s, gancho nos 2 primeiros segundos", "Abra pela frase mais forte. História longa vira parte 1 e parte 2.", "a média assistida é 13 s"],
-    ["next", "Próximos cortes", "Séries com nome fixo", "\"Carro da Linguiça #3\", \"Boates de SG #2\", \"Colégios de SG\". CTA final: \"Segue pra ver a parte 2\".", "o carro da linguiça trouxe 17 dos ~32 seguidores"],
-    ["next", "Todo dia", "3 a 5 stories por dia", "Enquete \"Qual bairro de SG você é?\", caixinha \"Conta sua história\", repost do reel do dia, bastidores.", "só 1 story no período"],
-    ["next", "Ao publicar", "Usar \"Reels de teste\"", "Mostra o reel primeiro só para quem não segue. Serve para comparar dois ganchos do mesmo corte.", "testa sem queimar o feed"],
-    ["next", "Ao publicar", "Capa e legenda padronizadas", "Capa com o mesmo título do vídeo. Legenda: gancho com pergunta, CTA de compartilhar, 5 a 8 hashtags de SG.", "os posts antigos estão em caixa alta e sem hashtag"],
+    ["now", "As duas redes", "Repetir a fórmula do Maria Paula", "Corte de 20 a 35 s, título com pergunta e curiosidade, CTA com pergunta de palpite. Foi o reel com mais visualizações desde a boate.", "17 s de média e 4 seguidores num dia"],
+    ["now", "As duas redes", "Gancho no primeiro segundo", "Abrir pela frase mais forte, sem \"então, deixa eu contar\". Vale para Shorts, reels e para o começo dos vídeos longos.", "54% pulam o Short; 1 em 5 fica no vídeo longo até 0:30"],
+    ["now", "YouTube", "Abrir os vídeos longos com um teaser de 20 a 30 s", "Começar pelo melhor momento do episódio (a punchline, sem contar o final) e só depois entrar a vinheta e a apresentação.", "só 20 a 23% continuam aos 30 s"],
+    ["now", "YouTube", "Ligar cada Short ao vídeo longo", "Usar \"Vídeo relacionado\" no Short apontando para o episódio ou corte longo do mesmo tema.", "Shorts trazem gente; vídeos longos trazem 22 dos inscritos"],
+    ["now", "YouTube", "Títulos e descrições de busca", "Escrever como as pessoas pesquisam: \"Como era o Piscinão de São Gonçalo?\", \"O que é o carro da linguiça?\". Nome de bairro no título, capítulos e palavras-chave na descrição.", "30,5% das visualizações dos vídeos longos vêm da busca"],
+    ["next", "YouTube", "Miniaturas mais fortes", "Rosto com expressão e no máximo 3 palavras grandes, com o amarelo do canal. Usar \"Testar e comparar\" para testar 2 ou 3 versões.", "taxa de cliques de 3,0%"],
+    ["next", "YouTube", "Playlists por série", "Carro da linguiça, Boates de SG, Colégios de SG, Eu sou de São Gonçalo. Quem termina um vídeo emenda o próximo.", "público 99,5% novo; falta quem volte"],
+    ["now", "Instagram", "1 reel por dia, sempre no mesmo horário", "O dia 02/10, com um reel só, teve 1.747 visualizações. Os dias com 3 ou 4 reels tiveram menos.", "a curva cai quando há vários posts no mesmo dia"],
+    ["now", "Instagram", "Collab com os participantes e responder comentários na 1ª hora", "Publicar como Collab com @castrocayyo, @rafael.soares21, @figueiredowillians e @getulio_vargas. Há 10 comentários sem resposta.", "o reel aparece para os seguidores deles"],
+    ["next", "Instagram", "Séries com nome fixo e parte 2", "\"Carro da Linguiça #3\", \"Boates de SG #2\". O CTA final pede para seguir para ver a próxima.", "o carro da linguiça trouxe 17 seguidores"],
+    ["next", "Instagram", "Stories todos os dias e bio nova", "Enquete \"qual bairro de SG você é?\", caixinha de histórias para virar pauta. Bio: \"Histórias de São Gonçalo que só quem é daqui entende\".", "faltam 6 seguidores para liberar os dados do público"],
+    ["next", "Gravação de hoje", "Gravar pensando nos cortes", "Para cada pauta, contar a história em até 1 minuto, com começo, meio e punchline. Fazer uma pergunta para o público no fim de cada bloco.", "facilita cortes de 20 a 35 s"],
   ];
-  const KEY = "painel-tc-plano";
+  const KEY = "painel-tc-plano-v2";
   let done = {};
   try { done = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { done = {}; }
   const box = document.getElementById("plan");
